@@ -1,0 +1,24 @@
+main,
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.button {
+  width: 150px;
+  font-weight: 500;
+  font-size: 20px;
+  height: 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+  color: white;
+  background-color: #485806;
+  border: none;
+  border-radius: 5px;
+  transition: all 250ms;
+}
+.button:hover {
+  color: black;
+  background-color: #93ad18;
+  font-weight: 600;
+}
