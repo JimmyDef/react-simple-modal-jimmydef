@@ -5,23 +5,25 @@
   "private": false,
   "type": "module",
   "author": "jimmy defains",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "files": [
     "dist"
   ],
+  "sideEffects": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:component": "vite build --config vite.config.js",
+    "build:demo": "vite build --config vite.config.demo.js",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "publish": "npm publish --access public"
+    "publish": "npm publish --access public",
+    "predeploy": "npm run build ",
+    "deploy": "vite build --config vite.config.demo.js && gh-pages -d demo"
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
@@ -30,7 +32,14 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
-    "vite": "^5.2.0"
+    "gh-pages": "^6.1.1",
+    "vite": "^5.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "repository": {
     "type": "git",

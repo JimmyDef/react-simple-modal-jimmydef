@@ -2,8 +2,8 @@ import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import PropTypes from "prop-types";
 import styles from "./modal.module.css";
-import crossButton from "./../assets/cross.svg";
-
+import crossButton from "./../../assets/cross.svg";
+import "./modal.module.css";
 /**
  * Modal is a React component for displaying a modal window.
  *
