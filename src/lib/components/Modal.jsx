@@ -105,7 +105,7 @@ const Modal = ({
               <img
                 src={closeButtonIcon}
                 alt="close icon"
-                className={styles.crossImg}
+                className={styles.closeButtonIcon}
               />
             </button>
           )}

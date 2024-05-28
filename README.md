@@ -2,6 +2,14 @@
 
 `Modal` is a customizable React component for displaying modal dialogs. It provides an easy way to create modals with various configurations, including title, content, confirm and close buttons, and more.
 
+## Demo
+
+[Check out the demo](https://jimmydef.github.io/react-simple-modal-jimmydef/)
+
+## Screenshot
+
+![Screenshot](./assets/screenshot.png)
+
 ## Installation
 
 You can install the package via npm:
@@ -78,7 +86,7 @@ The component uses CSS modules for styling. The following CSS classes are availa
 - `confirmButton`: Styles for the confirm button.
 - `closeButton`: Styles for the close button.
 - `crossButton`: Styles for the cross button.
-- `crossImg`: Styles for the cross button image.
+- `closeButtonIcon`: Styles for the cross button icon.
 
 ### Accessibility
 
@@ -94,4 +102,4 @@ If you have suggestions for how this component could be improved, or want to rep
 
 ## Acknowledgements
 
-Thank you for using myModal component! If you have any questions or feedback, feel free to reach out.
+Thank you for using my Modal component! If you have any questions or feedback, feel free to reach out.
