@@ -5,7 +5,7 @@
   "private": false,
   "type": "module",
   "author": "jimmy defains",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "files": [
@@ -20,7 +20,6 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "publish": "npm publish --access public",
-    "predeploy": "npm run build ",
     "deploy": "vite build --config vite.config.demo.js && gh-pages -d demo"
   },
   "dependencies": {},

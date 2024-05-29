@@ -18,12 +18,13 @@
   margin: 0 20px;
   padding: 30px;
   border-radius: 5px;
-  min-width: 300px;
+  min-width: 280px;
   max-width: 500px;
   animation: modalopen 0.3s;
   cursor: default;
 }
-
+.title {
+}
 .childrenSection {
   margin: 0 auto 40px;
   text-align: left;
@@ -37,7 +38,7 @@
 }
 
 .confirmButton,
-.closeButton {
+.cancelButton {
   width: 150px;
   height: 35px;
   align-self: flex-end;
@@ -52,12 +53,12 @@
 }
 
 .confirmButton:hover,
-.closeButton:hover {
+.cancelButton:hover {
   background-color: #93ad18;
 }
 
 .confirmButton:focus-visible,
-.closeButton:focus-visible {
+.cancelButton:focus-visible {
   background-color: #93ad18;
   border: solid 2px black;
   transition: all 0ms;
@@ -65,13 +66,13 @@
 }
 
 .confirmButton:active,
-.closeButton:active {
+.cancelButton:active {
   transform: scale(0.98);
   border: none;
   transition: all 0ms;
 }
 
-.crossButton {
+.closeButton {
   cursor: pointer;
   position: absolute;
   top: 10px;
@@ -86,21 +87,21 @@
   transition: all 250ms;
 }
 
-.crossButton:hover {
+.closeButton:hover {
   transform: scale(1.1);
 }
 
-.crossButton:active {
+.closeButton:active {
   transform: scale(0.98);
   border: none;
   transition: all 0ms;
 }
 
-.crossButton:focus {
+.closeButton:focus {
   transition: all 0ms;
 }
 
-.crossImg {
+.closeButtonIcon {
   height: 100%;
   width: 100%;
 }

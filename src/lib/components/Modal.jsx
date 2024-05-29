@@ -10,28 +10,26 @@ import "./modal.module.css";
  * @param {Object} props The properties of the component.
  * @param {boolean} props.isOpen Indicates whether the modal is open.
  * @param {function} props.onClose Function called to close the modal.
- * @param {React.ReactNode} props.children Content to be displayed in the modal.
  * @param {string} props.title The title of the modal.
  * @param {function} [props.onConfirmClick] Function called when the confirm button is clicked.
- * @param {React.RefObject} [props.focusRef] Reference to the element to focus when the modal opens.
- * @param {boolean} [props.showCloseButton=false] Indicates whether the cross close button should be displayed.
- * @param {boolean} [props.showCancelButton=true] Indicates whether the close button should be displayed.
- * @param {string} [props.closeButtonLabel="Close"] Alternative text for the close button.
- * @param {string} [props.closeButtonIcon=crossButton] Path of the image for the close button.
+ * @param {boolean} [props.showCancelButton=true] Indicates whether the cancel button should be displayed.
+ * @param {string} [props.cancelButtonLabel="Close"] Alternative text for the cancel button.
+ * @param {boolean} [props.showCloseButtonIcon=false] Indicates whether the  close icon button  should be displayed.
+ * @param {string} [props.closeButtonIcon=crossButton] Path of the image for the close icon button.
+ * @param {React.ReactNode} props.children Content to be displayed in the modal.
  * @returns {JSX.Element|null} The JSX rendered output of the component or null if the modal is closed.
  */
 
 const Modal = ({
   isOpen,
   onClose,
-  children,
   title,
   onConfirmClick,
-
-  showCloseButton = false,
   showCancelButton = true,
-  closeButtonLabel = "Close",
+  cancelButtonLabel = "Cancel",
+  showCloseButtonIcon = false,
   closeButtonIcon = crossButton,
+  children,
 }) => {
   const focusRef = useRef();
 
@@ -73,39 +71,39 @@ const Modal = ({
     <div
       tabIndex={0}
       ref={focusRef}
-      className={`${styles.overlay} jcm_Overlay`}
+      className={`${styles.overlay} rsmj_Overlay`}
       role="dialog"
       aria-modal="true">
-      <div className={`${styles.content} jcm_Modal`}>
-        <h1 id="modal-h1" className="normal">
+      <div className={`${styles.content} rsmj_Modal`}>
+        <h1 id="modal-h1" className={`${styles.title} rsmj_Title`}>
           {title}
         </h1>
-        <section className={`${styles.childrenSection} jcm_ChildrenSection`}>
+        <section className={`${styles.childrenSection} rsmj_ChildrenSection`}>
           {children}
         </section>
-        <section className={`${styles.buttonSection} jcm_ButtonSection`}>
+        <section className={`${styles.buttonSection} rsmj_ButtonSection`}>
           {onConfirmClick && (
             <button
-              className={`${styles.confirmButton} jcm_ConfirmButton`}
+              className={`${styles.confirmButton} rsmj_ConfirmButton`}
               onClick={onConfirmClick}>
               Confirmation
             </button>
           )}
           {showCancelButton && (
             <button
-              className={`${styles.closeButton} jcm_CloseButton`}
+              className={`${styles.cancelButton} rsmj_CancelButton`}
               onClick={onClose}>
-              {closeButtonLabel}
+              {cancelButtonLabel}
             </button>
           )}
-          {showCloseButton && (
+          {showCloseButtonIcon && (
             <button
-              className={`${styles.crossButton} jcm_CrossButton`}
+              className={`${styles.closeButton} rsmj_CloseButton`}
               onClick={onClose}>
               <img
                 src={closeButtonIcon}
                 alt="close icon"
-                className={styles.closeButtonIcon}
+                className={`${styles.closeButtonIcon} rsmj_CloseButtonIcon`}
               />
             </button>
           )}
@@ -120,11 +118,10 @@ Modal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
-  closeButtonLabel: PropTypes.string,
-  showCloseButton: PropTypes.bool,
+  cancelButtonLabel: PropTypes.string,
+  showCloseButtonIcon: PropTypes.bool,
   showCancelButton: PropTypes.bool,
   onConfirmClick: PropTypes.func,
-
   children: PropTypes.node,
   closeButtonIcon: PropTypes.string,
 };

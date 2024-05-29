@@ -8,7 +8,7 @@
 
 ## Screenshot
 
-![Screenshot](./assets/screenshot.png)
+![Screenshot](./src/assets/screenshot.png)
 
 ## Installation
 
@@ -45,8 +45,8 @@ const App = () => {
         onClose={closeModal}
         title="Modal Title"
         onConfirmClick={confirmAction}
-        showCloseButton={true}
-        closeButtonLabel="Cancel"
+        showCancelButton={true}
+
       >
         <p>This is the modal content</p>
       </Modal>
@@ -61,17 +61,17 @@ export default App;
 
 The `Modal` component accepts the following props:
 
-| Prop             | Type      | Required |    Default    | Description                                                   |
-| :--------------- | :-------- | :------: | :-----------: | :------------------------------------------------------------ |
-| isOpen           | Boolean   |   yes    |     FALSE     | Indicates whether the modal is open.                          |
-| onClose          | Function  |   yes    |               | Function called to close the modal.                           |
-| title            | String    |   yes    |               | The title of the modal.                                       |
-| onConfirmClick   | Function  |    no    |               | Function called when the confirm button is clicked.           |
-| showCloseButton  | Boolean   |    no    |     FALSE     | Indicates whether the cross close button should be displayed. |
-| showCancelButton | Boolean   |    no    |     TRUE      | Indicates whether the cancel button should be displayed.      |
-| closeButtonLabel | String    |    no    |    "Close"    | Alternative text for the close button.                        |
-| closeButtonIcon  | String    |    no    | "./cross.svg" | Path of the image for the close button.                       |
-| children         | ReactNode |    no    |               | Content to be displayed in the modal.                         |
+| Prop                | Type      | Required |    Default    | Description                                                  |
+| :------------------ | :-------- | :------: | :-----------: | :----------------------------------------------------------- |
+| isOpen              | Boolean   |   yes    |     FALSE     | Indicates whether the modal is open.                         |
+| onClose             | Function  |   yes    |               | Function called to close the modal.                          |
+| title               | String    |   yes    |               | The title of the modal.                                      |
+| onConfirmClick      | Function  |    no    |               | Function called when the confirm button is clicked.          |
+| showCancelButton    | Boolean   |    no    |     TRUE      | Indicates whether the cancel button should be displayed.     |
+| cancelButtonLabel   | String    |    no    |   "Cancel"    | Alternative text for the cancel button.                      |
+| showCloseButtonIcon | Boolean   |    no    |     FALSE     | Indicates whether the icon close button should be displayed. |
+| closeButtonIcon     | String    |    no    | "./cross.svg" | Path of the image for the close icon button.                 |
+| children            | ReactNode |    no    |               | Content to be displayed in the modal.                        |
 
 ## Customization
 
@@ -79,14 +79,15 @@ The `Modal` component accepts the following props:
 
 The component uses CSS modules for styling. The following CSS classes are available for customization:
 
-- `overlay`: Styles for the modal overlay.
-- `content`: Styles for the modal content.
-- `childrenSection`: Styles for the section containing the children content.
-- `buttonSection`: Styles for the section containing the buttons.
-- `confirmButton`: Styles for the confirm button.
-- `closeButton`: Styles for the close button.
-- `crossButton`: Styles for the cross button.
-- `closeButtonIcon`: Styles for the cross button icon.
+- `rsmj_Overlay`: Styles for the modal overlay.
+- `rsmj_Modal`: Styles for the modal content.
+- `rsmj_Title`: Styles for the modal title.
+- `rsmj_ChildrenSection`: Styles for the section containing the children content.
+- `rsmj_ButtonSection`: Styles for the section containing the buttons.
+- `rsmj_ConfirmButton`: Styles for the confirm button.
+- `rsmj_CancelButton`: Styles for the cancel button.
+- `rsmj_CloseButton`: Styles for the close button.
+- `rsmj_CloseButtonIcon`: Styles for the close button icon.
 
 ### Accessibility
 
