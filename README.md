@@ -4,7 +4,7 @@
 
 ## Demo
 
-[Check out the demo](https://jimmydef.github.io/react-simple-modal-jimmydef/){target="\_blank"}
+<a href="https://jimmydef.github.io/react-simple-modal-jimmydef/" target="_blank">Check out the demo</a>
 
 ## Screenshot
 
