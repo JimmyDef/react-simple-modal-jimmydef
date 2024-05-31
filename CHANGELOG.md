@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.1.1] - 2024-05-31
+
+### Added
+
+New props: **confirmLabel**, to change the button confirm label
+
+New accessiblity feature: Pressing Shift + Tab when the modal just opens and receives focus will close the modal.
+
 ## [1.1.0] - 2024-05-29
 
 ### Added

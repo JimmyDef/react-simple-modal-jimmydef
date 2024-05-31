@@ -1316,7 +1316,7 @@ const oe = /* @__PURE__ */ Fr(Kr), Xr = "_overlay_120x5_1", Hr = "_content_120x5
   title: k,
   onConfirmClick: d,
   showCancelButton: P = !0,
-  cancelButtonLabel: f = "Close",
+  cancelButtonLabel: f = "Cancel",
   showCloseButtonIcon: w = !1,
   closeButtonIcon: l = it,
   children: y

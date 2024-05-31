@@ -5,12 +5,18 @@ import "./app.css";
 
 const App = () => {
   const [isModalOpen, setModalOpen] = useState(false);
+
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
   return (
     <main>
       <h1>React Simple Modal JimmyDef</h1>
-      <button className="button" onClick={openModal}>
+      <button
+        className="button"
+        onClick={() => {
+          console.log("clicker");
+          openModal();
+        }}>
         Try me
       </button>
       <Modal title="Working good !" isOpen={isModalOpen} onClose={closeModal} />

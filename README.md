@@ -67,6 +67,7 @@ The `Modal` component accepts the following props:
 | onClose             | Function  |   yes    |               | Function called to close the modal.                          |
 | title               | String    |   yes    |               | The title of the modal.                                      |
 | onConfirmClick      | Function  |    no    |               | Function called when the confirm button is clicked.          |
+| confirmLabel        | String    |    no    |               | Alternative text for the confirm button.                     |
 | showCancelButton    | Boolean   |    no    |     TRUE      | Indicates whether the cancel button should be displayed.     |
 | cancelButtonLabel   | String    |    no    |   "Cancel"    | Alternative text for the cancel button.                      |
 | showCloseButtonIcon | Boolean   |    no    |     FALSE     | Indicates whether the icon close button should be displayed. |

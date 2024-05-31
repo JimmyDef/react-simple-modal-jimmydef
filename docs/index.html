@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>Home - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#Modal">Modal</a></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+    <section class="package">
+        <h3> </h3>		
+    </section>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    <section class="readme usertext">
+        <article><h1>react-simple-modal-jimmydef</h1>
+<p><code>Modal</code> is a customizable React component for displaying modal dialogs. It provides an easy way to create modals with various configurations, including title, content, confirm and close buttons, and more.</p>
+<h2>Demo</h2>
+<p><a href="https://jimmydef.github.io/react-simple-modal-jimmydef/">Check out the demo</a></p>
+<h2>Screenshot</h2>
+<p><img src="./src/assets/screenshot.png" alt="Screenshot"></p>
+<h2>Installation</h2>
+<p>You can install the package via npm:</p>
+<pre class="prettyprint source lang-bash"><code>npm install react-simple-modal-jimmydef
+</code></pre>
+<h2>Usage</h2>
+<p>Here's a basic example of how to use the <code>Modal</code> component:</p>
+<pre class="prettyprint source lang-javascript"><code>import React, { useState } from 'react';
+import Modal from 'react-simple-modal-jimmydef';
+
+
+const App = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
+  const confirmAction = () => {
+    // Add your confirmation logic here if needed
+    closeModal();
+  };
+
+  return (
+    &lt;div>
+      &lt;button onClick={openModal}>Open Modal&lt;/button>
+      &lt;Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        title=&quot;Modal Title&quot;
+        onConfirmClick={confirmAction}
+        showCancelButton={true}
+
+      >
+        &lt;p>This is the modal content&lt;/p>
+      &lt;/Modal>
+    &lt;/div>
+  );
+};
+
+export default App;
+</code></pre>
+<h2>Props</h2>
+<p>The <code>Modal</code> component accepts the following props:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Prop</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:center">Required</th>
+<th style="text-align:center">Default</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">isOpen</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">FALSE</td>
+<td style="text-align:left">Indicates whether the modal is open.</td>
+</tr>
+<tr>
+<td style="text-align:left">onClose</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center"></td>
+<td style="text-align:left">Function called to close the modal.</td>
+</tr>
+<tr>
+<td style="text-align:left">title</td>
+<td style="text-align:left">String</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center"></td>
+<td style="text-align:left">The title of the modal.</td>
+</tr>
+<tr>
+<td style="text-align:left">onConfirmClick</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:center">no</td>
+<td style="text-align:center"></td>
+<td style="text-align:left">Function called when the confirm button is clicked.</td>
+</tr>
+<tr>
+<td style="text-align:left">confirmLabel</td>
+<td style="text-align:left">String</td>
+<td style="text-align:center">no</td>
+<td style="text-align:center"></td>
+<td style="text-align:left">Alternative text for the confirm button.</td>
+</tr>
+<tr>
+<td style="text-align:left">showCancelButton</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:center">no</td>
+<td style="text-align:center">TRUE</td>
+<td style="text-align:left">Indicates whether the cancel button should be displayed.</td>
+</tr>
+<tr>
+<td style="text-align:left">cancelButtonLabel</td>
+<td style="text-align:left">String</td>
+<td style="text-align:center">no</td>
+<td style="text-align:center">&quot;Cancel&quot;</td>
+<td style="text-align:left">Alternative text for the cancel button.</td>
+</tr>
+<tr>
+<td style="text-align:left">showCloseButtonIcon</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:center">no</td>
+<td style="text-align:center">FALSE</td>
+<td style="text-align:left">Indicates whether the icon close button should be displayed.</td>
+</tr>
+<tr>
+<td style="text-align:left">closeButtonIcon</td>
+<td style="text-align:left">String</td>
+<td style="text-align:center">no</td>
+<td style="text-align:center">&quot;./cross.svg&quot;</td>
+<td style="text-align:left">Path of the image for the close icon button.</td>
+</tr>
+<tr>
+<td style="text-align:left">children</td>
+<td style="text-align:left">ReactNode</td>
+<td style="text-align:center">no</td>
+<td style="text-align:center"></td>
+<td style="text-align:left">Content to be displayed in the modal.</td>
+</tr>
+</tbody>
+</table>
+<h2>Customization</h2>
+<h3>CSS Classes</h3>
+<p>The component uses CSS modules for styling. The following CSS classes are available for customization:</p>
+<ul>
+<li><code>rsmj_Overlay</code>: Styles for the modal overlay.</li>
+<li><code>rsmj_Modal</code>: Styles for the modal content.</li>
+<li><code>rsmj_Title</code>: Styles for the modal title.</li>
+<li><code>rsmj_ChildrenSection</code>: Styles for the section containing the children content.</li>
+<li><code>rsmj_ButtonSection</code>: Styles for the section containing the buttons.</li>
+<li><code>rsmj_ConfirmButton</code>: Styles for the confirm button.</li>
+<li><code>rsmj_CancelButton</code>: Styles for the cancel button.</li>
+<li><code>rsmj_CloseButton</code>: Styles for the close button.</li>
+<li><code>rsmj_CloseButtonIcon</code>: Styles for the close button icon.</li>
+</ul>
+<h3>Accessibility</h3>
+<p>The <code>Modal</code> component is built with accessibility in mind. It sets the <code>aria-hidden</code> attribute on the root element when the modal is open and handles focus management appropriately.</p>
+<h2>License</h2>
+<p>This project is licensed under the MIT License.</p>
+<h2>Contributing</h2>
+<p>If you have suggestions for how this component could be improved, or want to report a bug, open an issue! I'd love all and any contributions. For more details, check out the contributing guidelines.</p>
+<h2>Acknowledgements</h2>
+<p>Thank you for using my Modal component! If you have any questions or feedback, feel free to reach out.</p></article>
+    </section>
+
+
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.3</a> using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>
