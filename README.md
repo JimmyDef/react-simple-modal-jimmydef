@@ -4,7 +4,7 @@
 
 ## Demo
 
-[Check out the demo](https://jimmydef.github.io/react-simple-modal-jimmydef/)
+[Check out the demo](https://jimmydef.github.io/react-simple-modal-jimmydef/){target="\_blank"}
 
 ## Screenshot
 
