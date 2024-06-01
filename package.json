@@ -16,14 +16,13 @@
   "private": false,
   "type": "module",
   "author": "jimmy defains",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "style": "dist/style.css",
   "files": [
     "dist"
   ],
-  "sideEffects": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -67,5 +66,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/JimmyDef/react-simple-modal-jimmydef"
-  }
+  },
+  "sideEffects": [
+    "dist/style.css"
+  ]
 }

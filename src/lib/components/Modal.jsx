@@ -2,8 +2,8 @@ import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import PropTypes from "prop-types";
 import styles from "./modal.module.css";
-import injectStyles from "./injectStyles";
 import crossButton from "./../../assets/cross.svg";
+import "./modal.module.css";
 
 /**
  * Modal is a React component for displaying a modal window.
@@ -35,9 +35,7 @@ const Modal = ({
   children,
 }) => {
   const focusRef = useRef();
-  useEffect(() => {
-    injectStyles();
-  }, []);
+
   // Effect to manage focus when modal opens or closes
   useEffect(() => {
     const rootElement = document.getElementById("root");
