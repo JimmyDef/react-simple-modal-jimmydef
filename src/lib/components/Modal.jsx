@@ -1,9 +1,8 @@
 import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import PropTypes from "prop-types";
-import styles from "./modal.module.css";
 import crossButton from "./../../assets/cross.svg";
-import "./modal.module.css";
+import "./modal.css";
 
 /**
  * Modal is a React component for displaying a modal window.
@@ -82,40 +81,34 @@ const Modal = ({
       id="firstFocusedDiv"
       tabIndex={0}
       ref={focusRef}
-      className={`${styles.overlay} rsmj_Overlay`}
+      className="rsmj_Overlay"
       role="dialog"
       aria-modal="true">
-      <div className={`${styles.content} rsmj_Modal`}>
-        <h1 id="modal-h1" className={`${styles.title} rsmj_Title`}>
+      <div className="rsmj_Modal">
+        <h1 id="modal-h1" className="rsmj_Title">
           {title}
         </h1>
-        <section className={`${styles.childrenSection} rsmj_ChildrenSection`}>
-          {children}
-        </section>
-        <section className={`${styles.buttonSection} rsmj_ButtonSection`}>
+        <section className="rsmj_ChildrenSection">{children}</section>
+        <section className="rsmj_ButtonSection">
           {onConfirmClick && (
-            <button
-              className={`${styles.confirmButton} rsmj_ConfirmButton`}
-              onClick={onConfirmClick}>
+            <button className="rsmj_ConfirmButton" onClick={onConfirmClick}>
               {confirmLabel}
             </button>
           )}
           {showCancelButton && (
-            <button
-              className={`${styles.cancelButton} rsmj_CancelButton`}
-              onClick={onClose}>
+            <button className="rsmj_CancelButton" onClick={onClose}>
               {cancelButtonLabel}
             </button>
           )}
           {showCloseButtonIcon && (
             <button
               data-testid="closeIconButton"
-              className={`${styles.closeButton} rsmj_CloseButton`}
+              className="rsmj_CloseButton"
               onClick={onClose}>
               <img
                 src={closeButtonIcon}
                 alt="close icon"
-                className={`${styles.closeButtonIcon} rsmj_CloseButtonIcon`}
+                className="rsmj_CloseButtonIcon"
               />
             </button>
           )}

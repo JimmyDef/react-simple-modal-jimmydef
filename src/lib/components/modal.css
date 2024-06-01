@@ -1,4 +1,4 @@
-.overlay {
+.rsmj_Overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -11,7 +11,7 @@
   z-index: 500;
 }
 
-.content {
+.rsmj_Modal {
   position: absolute;
   text-align: center;
   background-color: #e6e6e6;
@@ -23,22 +23,22 @@
   animation: modalopen 0.3s;
   cursor: default;
 }
-.title {
+.rsmj_Title {
 }
-.childrenSection {
+.rsmj_ChildrenSection {
   margin: 0 auto 40px;
   text-align: left;
 }
 
-.buttonSection {
+.rsmj_ButtonSection {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px 20px;
 }
 
-.confirmButton,
-.cancelButton {
+.rsmj_ConfirmButton,
+.rsmj_CancelButton {
   width: 150px;
   height: 35px;
   align-self: flex-end;
@@ -52,27 +52,27 @@
   font-size: 18px;
 }
 
-.confirmButton:hover,
-.cancelButton:hover {
+.rsmj_ConfirmButton:hover,
+.rsmj_CancelButton:hover {
   background-color: #93ad18;
 }
 
-.confirmButton:focus-visible,
-.cancelButton:focus-visible {
+.rsmj_ConfirmButton:focus-visible,
+.rsmj_CancelButton:focus-visible {
   background-color: #93ad18;
   border: solid 2px black;
   transition: all 0ms;
   outline: none;
 }
 
-.confirmButton:active,
-.cancelButton:active {
+.rsmj_ConfirmButton:active,
+.rsmj_CancelButton:active {
   transform: scale(0.98);
   border: none;
   transition: all 0ms;
 }
 
-.closeButton {
+.rsmj_CloseButton {
   cursor: pointer;
   position: absolute;
   top: 10px;
@@ -87,21 +87,21 @@
   transition: all 250ms;
 }
 
-.closeButton:hover {
+.rsmj_CloseButton:hover {
   transform: scale(1.1);
 }
 
-.closeButton:active {
+.rsmj_CloseButton:active {
   transform: scale(0.98);
   border: none;
   transition: all 0ms;
 }
 
-.closeButton:focus {
+.rsmj_CloseButton:focus {
   transition: all 0ms;
 }
 
-.closeButtonIcon {
+.rsmj_CloseButtonIcon {
   height: 100%;
   width: 100%;
 }
