@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import PropTypes from "prop-types";
 import styles from "./modal.module.css";
-
+import injectStyles from "./injectStyles";
 import crossButton from "./../../assets/cross.svg";
 
 /**
@@ -35,7 +35,9 @@ const Modal = ({
   children,
 }) => {
   const focusRef = useRef();
-
+  useEffect(() => {
+    injectStyles();
+  }, []);
   // Effect to manage focus when modal opens or closes
   useEffect(() => {
     const rootElement = document.getElementById("root");

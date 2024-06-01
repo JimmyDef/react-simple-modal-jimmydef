@@ -4,6 +4,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   css: {
     modules: true,
+    scopeBehaviour: "local",
   },
   optimizeDeps: {
     include: ["react-simple-modal-jimmydef/dist/style.css"],
