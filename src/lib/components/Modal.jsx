@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import PropTypes from "prop-types";
 import crossButton from "./../../assets/cross.svg";
+
 import "./modal.css";
 
 /**
