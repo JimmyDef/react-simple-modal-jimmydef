@@ -2,8 +2,9 @@ import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import PropTypes from "prop-types";
 import styles from "./modal.module.css";
+
 import crossButton from "./../../assets/cross.svg";
-import "./modal.module.css";
+
 /**
  * Modal is a React component for displaying a modal window.
  *
@@ -108,7 +109,7 @@ const Modal = ({
           )}
           {showCloseButtonIcon && (
             <button
-              data-testId="closeIconButton"
+              data-testid="closeIconButton"
               className={`${styles.closeButton} rsmj_CloseButton`}
               onClick={onClose}>
               <img
