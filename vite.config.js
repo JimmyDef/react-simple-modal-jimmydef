@@ -17,6 +17,18 @@ export default defineConfig({
     env: {
       IS_REACT_ACT_ENVIRONMENT: "true",
     },
+    coverage: {
+      exclude: [
+        "node_modules/",
+        "dist/",
+        "coverage/",
+        "docs/",
+        ".eslintrc.cjs",
+      ],
+    },
+  },
+  coverage: {
+    exclude: ["node_modules/", "dist/", "coverage/", "**/docs/**"],
   },
   build: {
     lib: {

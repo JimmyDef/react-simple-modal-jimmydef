@@ -25,3 +25,6 @@ dist-ssr
 
 .cypress/
 cypress
+cypress.config.js
+delete_deps_folders.bat
+delete_folder_you_want.bat

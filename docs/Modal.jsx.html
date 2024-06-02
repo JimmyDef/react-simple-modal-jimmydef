@@ -48,9 +48,10 @@
             <pre class="prettyprint source linenums"><code>import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import PropTypes from "prop-types";
-import styles from "./modal.module.css";
 import crossButton from "./../../assets/cross.svg";
-import "./modal.module.css";
+
+import "./modal.css";
+
 /**
  * Modal is a React component for displaying a modal window.
  *
@@ -128,40 +129,34 @@ const Modal = ({
       id="firstFocusedDiv"
       tabIndex={0}
       ref={focusRef}
-      className={`${styles.overlay} rsmj_Overlay`}
+      className="rsmj_Overlay"
       role="dialog"
       aria-modal="true">
-      &lt;div className={`${styles.content} rsmj_Modal`}>
-        &lt;h1 id="modal-h1" className={`${styles.title} rsmj_Title`}>
+      &lt;div className="rsmj_Modal">
+        &lt;h1 id="modal-h1" className="rsmj_Title">
           {title}
         &lt;/h1>
-        &lt;section className={`${styles.childrenSection} rsmj_ChildrenSection`}>
-          {children}
-        &lt;/section>
-        &lt;section className={`${styles.buttonSection} rsmj_ButtonSection`}>
+        &lt;section className="rsmj_ChildrenSection">{children}&lt;/section>
+        &lt;section className="rsmj_ButtonSection">
           {onConfirmClick &amp;&amp; (
-            &lt;button
-              className={`${styles.confirmButton} rsmj_ConfirmButton`}
-              onClick={onConfirmClick}>
+            &lt;button className="rsmj_ConfirmButton" onClick={onConfirmClick}>
               {confirmLabel}
             &lt;/button>
           )}
           {showCancelButton &amp;&amp; (
-            &lt;button
-              className={`${styles.cancelButton} rsmj_CancelButton`}
-              onClick={onClose}>
+            &lt;button className="rsmj_CancelButton" onClick={onClose}>
               {cancelButtonLabel}
             &lt;/button>
           )}
           {showCloseButtonIcon &amp;&amp; (
             &lt;button
-              data-testId="closeIconButton"
-              className={`${styles.closeButton} rsmj_CloseButton`}
+              data-testid="closeIconButton"
+              className="rsmj_CloseButton"
               onClick={onClose}>
               &lt;img
                 src={closeButtonIcon}
                 alt="close icon"
-                className={`${styles.closeButtonIcon} rsmj_CloseButtonIcon`}
+                className="rsmj_CloseButtonIcon"
               />
             &lt;/button>
           )}

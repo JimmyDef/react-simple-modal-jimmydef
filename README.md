@@ -78,7 +78,7 @@ The `Modal` component accepts the following props:
 
 ### CSS Classes
 
-The component uses CSS modules for styling. The following CSS classes are available for customization:
+The following CSS classes are available for customization:
 
 - `rsmj_Overlay`: Styles for the modal overlay.
 - `rsmj_Modal`: Styles for the modal content.
