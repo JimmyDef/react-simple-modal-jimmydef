@@ -50,8 +50,10 @@ describe("Modal", () => {
   describe("when onConfirmClick props receive a function", () => {
     it("Should display a functional  Confirm button", async () => {
       const onConfirmClick = vi.fn();
+      const onClose = vi.fn();
       render(
         <Modal
+          onClose={onClose}
           isOpen={true}
           title="Working good !"
           onConfirmClick={onConfirmClick}
@@ -85,9 +87,11 @@ describe("Modal", () => {
   describe("when closeButtonIcon props receive an  image/icon", () => {
     it("Should display the image", async () => {
       const closeButtonIcon = "/path/to/close-icon.png";
+      const onClose = vi.fn();
 
       render(
         <Modal
+          onClose={onClose}
           isOpen={true}
           title="Working good !"
           showCloseButtonIcon={true}
