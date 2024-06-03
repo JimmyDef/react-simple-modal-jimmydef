@@ -31,7 +31,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "publish": "npm publish --access public",
-    "deploy": "vite build --config vite.config.demo.js && gh-pages -d demo -b gh-pages -r https://github.com/jimmyDef/react-simple-modal-jimmydef.git",
+    "deploy": "vite build --config vite.config.demo.js && gh-pages -d demo -b gh-pages -r https://github.com/JimmyDef/react-simple-modal-jimmydef.git",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "cy:open": "cypress open",
