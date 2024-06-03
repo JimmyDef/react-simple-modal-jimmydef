@@ -14,7 +14,6 @@ const App = () => {
       <button
         className="button"
         onClick={() => {
-          console.log("clicker");
           openModal();
         }}>
         Try me
