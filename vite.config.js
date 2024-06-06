@@ -34,14 +34,21 @@ export default defineConfig({
     lib: {
       entry: "./src/lib/components/Modal.jsx",
       name: "ReactSimpleModaljimmydef",
-      fileName: (format) => `index.${format}.js`,
+      formats: ["es", "umd"],
+      fileName: (format) => `mylibrary.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],
       output: {
         chunkFileNames: "chunks/[name].[hash].js",
-        assetFileNames: "assets/[name][extname]",
-        entryFileNames: "[name].js",
+        assetFileNames: ({ name }) => {
+          // Ensure CSS files have lowercase names
+          if (name && name.endsWith(".css")) {
+            return `assets/${name.toLowerCase()}`;
+          }
+          return `assets/[name][extname]`;
+        },
+        entryFileNames: "index.js",
         globals: {
           react: "React",
           "react-dom": "ReactDOM",

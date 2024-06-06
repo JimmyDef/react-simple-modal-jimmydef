@@ -16,10 +16,10 @@
   "private": false,
   "type": "module",
   "author": "jimmy defains",
-  "version": "1.1.11",
-  "main": "dist/Modal.js",
-  "module": "dist/Modal.js",
-  "style": "dist/assets/Modal.css",
+  "version": "1.1.12",
+  "main": "dist/modal.js",
+  "module": "dist/modal.js",
+  "style": "dist/assets/modal.css",
   "files": [
     "dist"
   ],

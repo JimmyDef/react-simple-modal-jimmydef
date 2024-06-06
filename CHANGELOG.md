@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.1.12] - 2024-06-06
+
+### Added
+
+Set vite configuration to have the css injected automaticly into the app and skip the manuel importation
+
 ## [1.1.1] - 2024-05-31
 
 ### Added
