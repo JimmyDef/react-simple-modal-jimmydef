@@ -10,7 +10,7 @@ export type ModalProps = {
   cancelButtonLabel?: "Cancel";
   showCloseButtonIcon?: boolean;
   closeButtonIcon?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 declare const Modal: React.FC<ModalProps>;
