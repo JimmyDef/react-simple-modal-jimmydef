@@ -90,6 +90,12 @@ The following CSS classes are available for customization:
 - `rsmj_CloseButton`: Styles for the close button.
 - `rsmj_CloseButtonIcon`: Styles for the close button icon.
 
+### TypeScript Support
+
+This package includes TypeScript declarations to provide type checking and autocompletion for TypeScript users.
+
+The TypeScript declaration file (Modal.d.ts) located in the dist directory provides the types for the Modal component props:
+
 ### Accessibility
 
 The `Modal` component is built with accessibility in mind. It sets the `aria-hidden` attribute on the root element when the modal is open and handles focus management appropriately.

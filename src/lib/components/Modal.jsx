@@ -91,14 +91,14 @@ const Modal = ({
         </h1>
         <section className="rsmj_ChildrenSection">{children}</section>
         <section className="rsmj_ButtonSection">
-          {onConfirmClick && (
-            <button className="rsmj_ConfirmButton" onClick={onConfirmClick}>
-              {confirmLabel}
-            </button>
-          )}
           {showCancelButton && (
             <button className="rsmj_CancelButton" onClick={onClose}>
               {cancelButtonLabel}
+            </button>
+          )}
+          {onConfirmClick && (
+            <button className="rsmj_ConfirmButton" onClick={onConfirmClick}>
+              {confirmLabel}
             </button>
           )}
           {showCloseButtonIcon && (
