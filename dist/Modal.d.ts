@@ -4,10 +4,10 @@ export type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
   title: string;
-  onConfirmClick?: () => {};
-  confirmLabel?: "Confirm";
+  onConfirmClick?: () => void;
+  confirmLabel?: string;
   showCancelButton?: boolean;
-  cancelButtonLabel?: "Cancel";
+  cancelButtonLabel?: string;
   showCloseButtonIcon?: boolean;
   closeButtonIcon?: string;
   children?: React.ReactNode;
